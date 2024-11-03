@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Pesronal Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="header">
+        <div class="container">
+            
+            <nav>          
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            </nav>
+
+        <div class="links">
+
+            <section class="home">
+                <div class="home-sci">
+              <div class="linkedin"><a href="https://www.linkedin.com/in/
+                dhanushree-b-a-920629304
+                "><i class='bx bxl-linkedin-square'></i></a></div>
+                 <div class="github"><a href="https://github.com/Dhanushree-B-A"><i class='bx bxl-github'></i></a></div>
+                <div class="gmail"><a href="https://mailto:madhu591545@gmail.com"><i class='bx bxl-gmail'></i></a></div>
+                </div>
+            </section>
+
+            <div class="header-text">
+               
+                <h2>Hi, I'm<span> Dhanushree B A</span></h2>
+            <h3>MCA Student</h3>
+      <div class="about">
+        <p class="about-header">About Me</p>
+        <p>I am a post graduate student pursuing Master Of Computer<br> Applications(MCA). I am currently looking forward to work<br> with real world applications by applying the skills that I have<br> gained so far and also enhance my skills through real world<br> projects.</p>
+       <a href="images/Dhanushree Resume.pdf" download>Download CV</a>
+      </div>
+
+        </div>
+    </div>
+                
+    </div>
+         
+            <!--------Portfolio--------->
+           
+            <div id="portfolio">
+                <h1 class="heading">Portfolio</h1>
+                <div class="container">
+
+                    <div class="skills">
+                    <h2>Technical Skills</h2>
+                        <ul>
+                            <li>Python Programming</li>
+                            <li>C Programming</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Javascript</li>
+                            <li>SQL</li>
+                        </ul></div>
+               
+                    <div class="education">
+                        <h2> Education</h2>
+                      <ul><li>QALIFICATION-
+                        <p>Master Of Computer<br> Applications(MCA).</p>
+                      </li><br>
+                    <li>COLLEGE-
+                    <p>M S Ramaiah Institute<br> Of Technology.</p></li></ul>
+                    </div>
+
+                    <div class="interest">
+                       <h2> Interests</h2>
+                       <ul>
+                        <li>Photography</li>
+                        <li>Internet Surfing</li>
+                        <li>Crafting</li>
+                        <li>Badminton</li>
+                        <li>Exploring new things</li>
+                    </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!----contact------>
+
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="contact-left">
+                            <h1 class="subtitle">Contact Me</h1>
+                            <p><a href="https://telegram.org/dl"><i class='bx bxl-telegram'></i>Telegram</a></p>
+                            <p><a href="tel:0123456789"><i class='bx bxs-phone-call'></i>Phone</a></p>
+                        </div>
+
+    <div class="contact-right">
+        <form name="submit-to-google-sheet">
+        <div class="name"><input type="text" name="Name" placeholder="Your Name" required></div>
+         <div class="email"><input type="email" name="email" placeholder="Your Email" required></div>
+                <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                <button>Submit</button>
+        </form>
+        <span id="msg"></span>
+        </div>
+
+</div>                 
+        </div>
+    </div>
+                
+            </div>
+
+        <!--image-->
+            <div class="contianer">
+
+                    <div class="home-img">
+                        <div class="glowing-circle">
+                        <div class="image">
+                        <img src="images/user.png">
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+            </div>
+              
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbyW-uw4kTbeThNJ_c3Q_XrFvqamrzzOW5KPK8h_seJEe44anp37ntLPgz1th5HfNMF8/exec'
+                const form = document.forms['submit-to-google-sheet']
+                const msg = document.getElementById("msg")
+
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        msg.innerHTML = "Message sent successfully"
+                        setTimeout(function(){
+                            msg.innerHTML = ""
+                        },3000)
+                        form.reset()
+                    })
+                    .catch(error => console.error('Error!', error.message))
+                })
+              </script>
+
+    </body>
+</html>
